@@ -9,14 +9,18 @@
     </head>
     <body>
 
-        <div class="grafico-linea">
+        <div class="grafico">
             <h2>STEP 1</h2>
             <canvas id="line-chart"></canvas>
         </div>
 
-        <div class="grafico-linea">
+        <div class="grafico">
             <h2>STEP 2</h2>
             <canvas id="2nd-lineChart"></canvas>
+        </div>
+
+        <div class="grafico">
+            <canvas id="pie-chart"></canvas>
         </div>
 
 

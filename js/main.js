@@ -36,6 +36,8 @@ $(document).ready(function() {
             console.log(grafici);
 
             graficoLinea(grafici);
+            graficoTorta(grafici);
+
 
 
         },
@@ -65,11 +67,34 @@ $(document).ready(function() {
                 labels: mesi,
                 datasets: [{
                     label: 'Fatturato',
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 99, 132)',
+                    backgroundColor: '#4E5754',
+                    borderColor: 'rgb(62,95,138)',
                     data: data
                 }]
             }
+        });
+    }
+
+
+    function graficoTorta(grafici) {
+        var graficoTorta = grafici.fatturato_by_agent;
+        var datiTorta = graficoTorta.data;
+
+        var arrayNomi = Object.keys(graficoTorta.data);
+        var arrayDati = Object.values(graficoTorta.data);
+        console.log(arrayNomi);
+        console.log(arrayDati);
+
+        var ctx = $('#pie-chart');
+        var chart = new Chart(ctx, {
+          type: graficoTorta.type,
+          data: {
+            datasets: [{
+              data: arrayDati,
+              backgroundColor: ['rgb(62,95,138)', '#CDA434', '#C35831', 'lightgreen']
+            }],
+            labels: arrayNomi
+          }
         });
     }
 
