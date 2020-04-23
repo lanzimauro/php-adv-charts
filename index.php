@@ -10,8 +10,16 @@
     <body>
 
         <div class="grafico-linea">
+            <h2>STEP 1</h2>
             <canvas id="line-chart"></canvas>
         </div>
+
+        <div class="grafico-linea">
+            <h2>STEP 2</h2>
+            <canvas id="2nd-lineChart"></canvas>
+        </div>
+
+
 
         <script src="js/main.js" charset="utf-8"></script>
     </body>
